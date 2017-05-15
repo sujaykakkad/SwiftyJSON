@@ -38,7 +38,7 @@ public struct Schema {
     let formats: [String:Validator]
     let schema: JSON
     
-    public init(_ schema: JSON) {
+    public init(_ schema:JSON) {
         title = schema["title"].string
         description = schema["description"].string
         
@@ -104,7 +104,7 @@ public struct Schema {
     }
 }
 
-func validators(_ root: Schema) -> (_ schema: JSON) -> [Validator] {
+func validators(_ root:Schema) -> (_ schema:JSON) -> [Validator] {
     return { schema in
         var validators = [Validator]()
         
