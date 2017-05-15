@@ -7,7 +7,6 @@
 //
 import Foundation
 
-
 public enum ValidationResult {
     case Valid
     case invalid([String])
